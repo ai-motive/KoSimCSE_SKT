@@ -194,7 +194,7 @@ def example_model_setting(model_ckpt):
 
     model = BERT(bert_model)
 
-    model.load_state_dict(torch.load(model_ckpt)['model'])
+    model.load_state_dict(torch.load(model_ckpt)['model'], strict=False)
     model.to(device)
     model.eval()
 
